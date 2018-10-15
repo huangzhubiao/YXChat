@@ -86,6 +86,7 @@
 		811DC0362160B9A300B8516E /* normal_face.plist in Resources */ = {isa = PBXBuildFile; fileRef = 811DC0322160B9A300B8516E /* normal_face.plist */; };
 		811DC0372160B9A300B8516E /* emoji.plist in Resources */ = {isa = PBXBuildFile; fileRef = 811DC0332160B9A300B8516E /* emoji.plist */; };
 		811DC0382160B9A300B8516E /* mayun.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 811DC0342160B9A300B8516E /* mayun.jpg */; };
+		8145661E2170843F00418377 /* PrivateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8145661D2170843F00418377 /* PrivateViewController.m */; };
 		815039AF215E23D4009A0017 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 815039AE215E23D4009A0017 /* AppDelegate.m */; };
 		815039B2215E23D4009A0017 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 815039B1215E23D4009A0017 /* ViewController.m */; };
 		815039B5215E23D5009A0017 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 815039B3215E23D5009A0017 /* Main.storyboard */; };
@@ -287,6 +288,8 @@
 		811DC0322160B9A300B8516E /* normal_face.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = normal_face.plist; path = YXChat/normal_face.plist; sourceTree = SOURCE_ROOT; };
 		811DC0332160B9A300B8516E /* emoji.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = emoji.plist; path = YXChat/emoji.plist; sourceTree = SOURCE_ROOT; };
 		811DC0342160B9A300B8516E /* mayun.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = mayun.jpg; path = YXChat/mayun.jpg; sourceTree = SOURCE_ROOT; };
+		8145661C2170843F00418377 /* PrivateViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrivateViewController.h; sourceTree = "<group>"; };
+		8145661D2170843F00418377 /* PrivateViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PrivateViewController.m; sourceTree = "<group>"; };
 		815039AA215E23D4009A0017 /* YXChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YXChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		815039AD215E23D4009A0017 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		815039AE215E23D4009A0017 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -381,6 +384,8 @@
 				811B9639216DA4DA0057FF2F /* LoginViewController.m */,
 				811B963B216DEFC20057FF2F /* RegistViewController.h */,
 				811B963C216DEFC20057FF2F /* RegistViewController.m */,
+				8145661C2170843F00418377 /* PrivateViewController.h */,
+				8145661D2170843F00418377 /* PrivateViewController.m */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -1132,6 +1137,7 @@
 				811B963D216DEFC20057FF2F /* RegistViewController.m in Sources */,
 				811DC0032160AC4D00B8516E /* NSString+Extension.m in Sources */,
 				811DC0042160AC4D00B8516E /* UIGestureRecognizer+YYAdd.m in Sources */,
+				8145661E2170843F00418377 /* PrivateViewController.m in Sources */,
 				815039F6215E28A1009A0017 /* YXNavViewController.m in Sources */,
 				811DC0022160AC4D00B8516E /* UIImage+Extension.m in Sources */,
 				811DBFE22160A9D600B8516E /* ICEmotionPageView.m in Sources */,

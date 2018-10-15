@@ -9,6 +9,7 @@
 #import "LoginViewController.h"
 #import "masonry.h"
 #import <JMessage/JMessage.h>
+#import "PrivateViewController.h"
 
 @interface LoginViewController ()<UITextFieldDelegate>
 
@@ -17,6 +18,8 @@
 
 @property (nonatomic,strong) UIButton *registButton;
 @property (nonatomic,strong) UIButton *loginButton;
+
+@property (nonatomic,strong) UIButton *privateButton;
 
 @end
 
@@ -75,7 +78,26 @@
     [self.registButton setTitle:@"注册" forState:UIControlStateNormal];
     [self.registButton addTarget:self action:@selector(regist) forControlEvents:UIControlEventTouchUpInside];
     self.registButton.backgroundColor = [UIColor grayColor];
+    
+    
+    self.privateButton = [[UIButton alloc] init];
+    [self.view addSubview:self.privateButton];
+    [self.privateButton mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.mas_equalTo(self.registButton.mas_bottom).offset(20);
+        make.left.mas_equalTo(20);
+        make.right.mas_equalTo(-20);
+        make.height.mas_equalTo(40);
+    }];
+    [self.privateButton setTitle:@"隐私" forState:UIControlStateNormal];
+    [self.privateButton addTarget:self action:@selector(private) forControlEvents:UIControlEventTouchUpInside];
+    self.privateButton.backgroundColor = [UIColor grayColor];
 }
+
+- (void)private{
+    PrivateViewController *privateVC = [[PrivateViewController alloc] init];
+    [self.navigationController pushViewController:privateVC animated:YES];
+}
+
 - (void)regist{
     NSString *account = self.acountTextField.text;
     NSString *password = self.passwordTextFiled.text;

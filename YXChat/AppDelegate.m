@@ -12,6 +12,7 @@
 #import <JMessage/JMessage.h>
 #import "LoginViewController.h"
 #import "YXVerificationinfo.h"
+#import "HBDNavigationController.h"
 #define JMAPPKEY @"e265219c22d7b8e0f1775d96"
 @interface AppDelegate ()<JMessageDelegate>
 
@@ -29,13 +30,15 @@
     [JMessage setupJMessage:launchOptions appKey:JMAPPKEY channel:nil apsForProduction:true category:nil messageRoaming:true];
     [self setupJmessage];
     LoginViewController *loginVC = [[LoginViewController alloc] init];
+    HBDNavigationController *navVc = [[HBDNavigationController alloc] initWithRootViewController:loginVC];
+    navVc.tabBarItem.title = @"denglu";
     __weak typeof(self) weakSelf = self;
     loginVC.loginSucess = ^{
         [weakSelf loginSuccess];
     };
     _window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     _window.backgroundColor = [UIColor whiteColor];
-    _window.rootViewController = loginVC;
+    _window.rootViewController = navVc;
     [_window makeKeyAndVisible];
     
     return YES;
